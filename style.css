@@ -1,0 +1,376 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eaf3f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.top-link {
+    background-color: #0b4f71;
+    text-align: center;
+    padding: 10px;
+}
+
+.top-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.top-link a:hover {
+    color: #ffd700;
+}
+
+
+
+header {
+    background: linear-gradient(135deg, #a40894, #633806);
+    color: white;
+    padding: 25px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #064663;
+}
+
+
+
+section {
+    padding: 45px;
+    border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+    text-align: center;
+    color: #064663;
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: #f4b942;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+h3 {
+    color: #087ea4;
+    margin-bottom: 12px;
+}
+
+p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+
+
+.about {
+    background-color: #ffffff;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    background-color: #f3f9fc;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    border-left: 6px solid #087ea4;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.personal-info {
+    font-size: 17px;
+    line-height: 2;
+}
+
+.personal-info strong {
+    color: #064663;
+}
+
+
+
+.life-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.life-columns > div {
+    background-color: #f8fbfc;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid #087ea4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.hobbies {
+    background-color: #f5fafc;
+}
+
+.hobby-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+}
+
+.hobby-columns > div {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-columns ul {
+    padding-left: 25px;
+}
+
+.hobby-columns li {
+    margin: 10px 0;
+    color: #444;
+}
+
+.hobby-columns li::marker {
+    color: #087ea4;
+}
+
+
+
+.favorites {
+    background-color: #ffffff;
+}
+
+.favorite-item {
+    background-color: #f7fbfd;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border-left: 5px solid #087ea4;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.favorite-item h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.favorite-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.favorite-content img {
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.artist-img {
+    width: 180px;
+    height: 180px;
+}
+
+.food-img {
+    width: 180px;
+    height: 150px;
+}
+
+.place-img {
+    width: 180px;
+    height: 150px;
+}
+
+.favorite-text {
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.favorite-text b {
+    display: block;
+    color: #064663;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+
+
+footer {
+    background-color: #064663;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+.favorite-item,
+.hobby-columns > div,
+.life-columns > div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorite-item:hover,
+.hobby-columns > div:hover,
+.life-columns > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .life-columns,
+    .hobby-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .favorite-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .favorite-text {
+        text-align: justify;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .title {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .personal-info {
+        font-size: 15px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .artist-img,
+    .food-img,
+    .place-img {
+        width: 150px;
+        height: 150px;
+    }
+}
